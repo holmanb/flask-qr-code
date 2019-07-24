@@ -1,0 +1,8 @@
+<!doctype html>
+<title>Check in/out</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+{% if qty %}
+  <h1>Count:{{ qty }} of product {{ pn }} has been checked {{ io }}.</h1>
+{% else %}
+  <h1>Uhhhh.... error!</h1>
+{% endif %}

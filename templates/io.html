@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Check in/out</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+{% if io %}
+  <h1>Checking {{ io }} product {{ pn }}. Enter quantity below.</h1>
+    <form action="/qty" method="get" target="_blank">
+      Quantity: <input type="text" name="qty" value="1" autofocus><br>
+      <input type="hidden" name="io" value="{{ io }}"><br> 
+      <input type="hidden" name="pn" value="{{ pn }}" ><br>
+      <button type="submit">Submit</button>
+{% else %}
+  <h1>Uhhhh.... error!</h1>
+{% endif %}
