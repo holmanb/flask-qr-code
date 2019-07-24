@@ -36,7 +36,7 @@ def index():
     return "<h1>Error!</h1>"
 
 
-@app.route('/qty')#, methods=['POST', 'GET'])
+@app.route('/qty')
 def test():
     print(request.args)
     if request.args['qty']:
